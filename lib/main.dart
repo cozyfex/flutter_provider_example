@@ -4,9 +4,11 @@ import 'package:provider/provider.dart';
 import 'models/counter.dart';
 
 void main() {
-  runApp(MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => Counter())],
-      child: MyApp()));
+  // runApp(MultiProvider(
+  //     providers: [ChangeNotifierProvider(create: (_) => Counter())],
+  //     child: MyApp()));
+  runApp(ChangeNotifierProvider(
+      create: (BuildContext context) => Counter(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
